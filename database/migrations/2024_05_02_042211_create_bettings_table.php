@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bettings', function (Blueprint $table) {
             $table->id();
-            $table->string('accountt_id');
+            $table->string('account_id');
             $table->string('ticket_number');
             $table->string('time');
             $table->date('date');
@@ -22,6 +22,8 @@ return new class extends Migration
             $table->double('amount', 10, 2);
             $table->decimal('rate', 4, 2);
             $table->timestamps();
+
+            $table->unique(['ticket_number', 'date', 'bit_type','fighting_number']);
         });
     }
 

@@ -18,6 +18,7 @@ class BettingCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\BulkDeleteOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -29,6 +30,8 @@ class BettingCrudController extends CrudController
         CRUD::setModel(\App\Models\Betting::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/betting');
         CRUD::setEntityNameStrings('betting', 'bettings');
+
+        // CRUD::addButtonFromView('top', 'delete all', 'delete_all', 'end');
     }
 
     /**
@@ -45,6 +48,8 @@ class BettingCrudController extends CrudController
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
          */
+      
+        
     }
 
     /**

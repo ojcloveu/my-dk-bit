@@ -25,7 +25,7 @@ class BettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'accountt_id' => 'required|string',
+            'account_id' => 'required|string',
             'ticket_number' => 'required|string',
             'time' => 'required|string',
             'date' => 'required|date',

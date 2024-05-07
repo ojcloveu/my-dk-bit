@@ -17,7 +17,7 @@ class Betting extends Model
      * @var array
      */
     protected $fillable = [
-        'accountt_id',
+        'account_id',
         'ticket_number',
         'time',
         'date',
